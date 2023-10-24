@@ -1,2 +1,2 @@
 # News-Website
-News Webiste
+News Website
