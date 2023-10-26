@@ -1,157 +1,105 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto:wght@500&display=swap");
-
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-:root {
-    --primary-text-color: #edf1f5;
-    --secondary-text-color: #9eb4ca;
-    --accent-color: #2294ed;
-    --accent-color-dark: #1d69a3;
-}
-
-body {
-    font-family: "Poppins", sans-serif;
-    color: var(--primary-text-color);
-    background-color: #332a38;
-}
-
-p {
-    font-family: "Roboto", sans-serif;
-    color: var(--secondary-text-color);
-    line-height: 1.4rem;
-}
-
-a {
-    text-decoration: none;
-}
-
-ul {
-    list-style: none;
-}
-
-.flex {
-    display: flex;
-    align-items: center;
-}
-
-.container {
-    max-width: 1180px;
-    margin-inline: auto;
-    overflow: hidden;
-}
-
-nav {
-    background-color: #000000;
-    box-shadow: 0 0 4px #b58780;
-    position: fixed;
-    top: 0;
-    z-index: 99;
-    left: 0;
-    right: 0;
-}
-
-
-.main-nav {
-    justify-content: space-between;
-    padding-block: 8px;
-}
-
-.company-logo img {
-    width: 120px;
-}
-
-.nav-links ul {
-    gap: 16px;
-}
-
-.hover-link {
-    cursor: pointer;
-}
-
-.hover-link:hover {
-    color: var(--secondary-text-color);
-}
-
-.hover-link:active {
-    color: red;
-}
-
-.nav-item.active {
-    color: var(--accent-color);
-}
-
-.search-bar {
-    height: 32px;
-    gap: 8px;
-}
-
-.news-input {
-    width: 200px;
+html{
     height: 100%;
-    padding-inline: 12px;
-    border-radius: 4px;
-    border: 2px solid #bbd0e2;
-    font-family: "Roboto", sans-serif;
-}
-
-.search-button {
-    background-color: var(--accent-color);
-    color: white;
-    padding: 8px 24px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-family: "Roboto", sans-serif;
-}
-
-.search-button:hover {
-    background-color: var(--accent-color-dark);
-}
-
-main {
-    padding-block: 20px;
-    margin-top: 80px;
-}
-
-.cards-container {
-    justify-content: space-between;
-    flex-wrap: wrap;
-    row-gap: 20px;
-    align-items: start;
-}
-
-.card {
-    width: 360px;
-    height: 400px;
-    /* box-shadow: 0 0 4px #9dbeda; */
-    border-radius: 4px;
-    cursor: pointer;
-    background-color: rgba(27, 26, 28, 0.66);
-    overflow: hidden;
-    transition: all 0.3s ease;
-}
-
-.card:hover {
-    box-shadow: 1px 1px 8px #d4ecff;
-    background-color: #224a5e;
-    transform: translateY(-2px);
-    
-}
-
-.card-header img {
+  }
+  
+  body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    background-color: #3a3a3a;
+  }
+  
+  /* White rectangle in the middle of the screen */
+  
+  #main-holder {
+    width: 50%;
+    height: 70%;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 7px;
+    box-shadow: 0px 0px 5px 2px black;
+  }
+  
+  /* -------------------------------------------------------------- */
+  
+  #login-header {}
+  
+  /* -------------------------------------------------------------- */
+  
+  /* Middle row of the main grid (contains the error message) */
+  
+  #login-error-msg-holder {
     width: 100%;
-    height: 180px;
-    object-fit: cover;
-}
-
-.card-content {
-    padding: 12px;
-}
-
-.news-source {
-    margin-block: 12px;
-}
+    height: 100%;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+  }
+  
+  /* Error message. By default it's transparent, but the opacity is controlled
+  by JavaScript */
+  
+  #login-error-msg {
+    width: 23%;
+    text-align: center;
+    margin: 0;
+    padding: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #8a0000;
+    border: 1px solid #8a0000;
+    background-color: #e58f8f;
+    opacity: 0;
+  }
+  
+  #error-msg-second-line {
+    display: block;
+  }
+  
+  /* -------------------------------------------------------------- */
+  
+  /* Adjust the positioning of the login form inside the last row of the
+  main grid */
+  
+  #login-form {
+    align-self: flex-start;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+  }
+  
+  /* Style the login form fields' placeholders */
+  
+  .login-form-field::placeholder {
+    color: #3a3a3a;
+  }
+  
+  /* Style the login form fields (username and password) */
+  
+  .login-form-field {
+    border: none;
+    border-bottom: 1px solid #3a3a3a;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    outline: none;
+    padding: 0px 0px 5px 5px;
+  }
+  
+  /* Style the login button */
+  
+  #login-form-submit {
+    width: 100%;
+    padding: 7px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    background-color: #3a3a3a;
+    cursor: pointer;
+    outline: none;
+  }
